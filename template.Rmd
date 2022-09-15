@@ -2,9 +2,6 @@
 title: "Simple document"
 output: html_document
 ---
-```{r}
-
-```
 
 I'm an R Markdown document! 
 
@@ -22,18 +19,3 @@ length(samp)
 
 I can take the mean of the sample, too!
 The mean is `r mean(samp)`.
-
-# Section 3
-{r, chunk_learningassessment_df}
-library(tidyverse)
-la_df = tibble(
-  norm_samp = rnorm(500, mean = 1),
-  norm_samp_pos = norm_samp > 0,
-  abs_norm_samp = abs(norm_samp)
-
-median_samp = median(pull(la_df, norm_samp))
-```
-
-The median of the variable containing absolute values is 
-`r round(median_samp, digits = 2)`.
-
